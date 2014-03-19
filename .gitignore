@@ -1,6 +1,1 @@
 bin/
-bin/*
-bin/view/
-bin/view/*
-*.class
-bin/view/GameArea.class
