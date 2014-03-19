@@ -30,7 +30,7 @@ public class Model {
     // XXX: BEGIN USER EDITED SECTION
     ///////////////////////////////////
     
-    public Color bgColor = new Color (240,240,240);
+    public Color bgColor = new Color (240,240,241);
     
     public MovieClip player;
     public MovieClip spinner;
