@@ -81,6 +81,7 @@ public class Model {
         turret.y = 480;
         turret.setOrigin(32,32);
         addChild(turret);
+        turret.stopAtEnd();
         
         
         

@@ -10,10 +10,11 @@ import java.util.LinkedList;
 
 import javax.swing.JPanel;
 
+import utils.Utils;
+
 import model.Constants;
 import model.MovieClip;
 import model.Model;
-import model.Utils;
 
 /** This is the main game area in the GUI.
  * It is a fixed sized region that contains all of the

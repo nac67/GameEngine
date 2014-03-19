@@ -3,6 +3,8 @@ package model;
 import java.awt.Point;
 import java.awt.image.BufferedImage;
 
+import utils.Utils;
+
 import model.animation.AnimationSwapper;
 import model.animation.IteratingAnimation;
 

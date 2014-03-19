@@ -1,4 +1,4 @@
-package model.tileboard;
+package utils.tileboard;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
