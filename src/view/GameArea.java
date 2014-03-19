@@ -22,6 +22,7 @@ import model.Model;
  * the paint method which actually updates the GUI.
  * @author Nick Cheng
  */
+@SuppressWarnings("serial")
 public class GameArea extends JPanel {
     private Model model;
     private int WIDTH;
