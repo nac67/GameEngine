@@ -18,16 +18,14 @@ import view.View;
  * @author Nick Cheng
  */
 public abstract class AbstractMouseHandler implements MouseListener {
-    Controller controller;
     View view;
     Model model;
     
     public boolean leftButton = false;
     public boolean rightButton = false;
     
-    public AbstractMouseHandler (Controller controller, Model model){
+    public AbstractMouseHandler (Model model){
         if(Constants.DEBUG) System.out.println("mouse handler init, waiting on view.");
-        this.controller = controller;
         this.model = model;
         
     }

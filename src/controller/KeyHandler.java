@@ -17,15 +17,12 @@ import model.Constants;
  * @author Nick Cheng
  */
 public class KeyHandler implements KeyListener {
-    Controller controller;
-    
     private boolean[] keysDown; 
     private Derivative[] keyDerivs;
     private int[] keyDerivResults;
     
-    public KeyHandler(Controller controller){
+    public KeyHandler(){
         if(Constants.DEBUG) System.out.println("key handler init, ready.");
-        this.controller = controller;
         keysDown = new boolean[128];
         keyDerivs = new Derivative[128];
         keyDerivResults = new int[128];

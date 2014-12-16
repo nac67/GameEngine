@@ -17,8 +17,8 @@ public class MouseHandler extends AbstractMouseHandler {
 
     //model variable inherited
     
-    public MouseHandler(Controller controller, Model model) {
-        super(controller, model);
+    public MouseHandler(Model model) {
+        super(model);
     }
     
     ///////////////////////////////////
@@ -39,7 +39,7 @@ public class MouseHandler extends AbstractMouseHandler {
             dot.y = m.getY();
             dot.setOrigin(12, 12);
             
-            if(dot.hitTest(controller.model.player,"circle")){
+            if(dot.hitTest(model.player,"circle")){
                 model.hits.add(dot);
                 model.addChild(dot,1);
             }else{

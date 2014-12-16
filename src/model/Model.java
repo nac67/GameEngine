@@ -83,11 +83,6 @@ public class Model {
         turret.setOrigin(32,32);
         addChild(turret);
         turret.stopAtEnd();
-        
-        
-        
-        
-        controller.gameMouse.hideMouse();
     }
     
     ///////////////////////////////////
@@ -124,13 +119,11 @@ public class Model {
      */
     public List<MovieClip>removeQueue;
     
-    public Controller controller;
-    
     public int levelShiftX = 0;
     public int levelShiftY = 0;
     
     /** Constructor */
-    public Model (Controller controller){
+    public Model (){
         if(Constants.DEBUG) System.out.println("model init, ready.");
         Animation.loadedAnimations = new HashMap<String, List<BufferedImage>>();
         displayList = new ArrayList<List<MovieClip>>();
@@ -138,7 +131,6 @@ public class Model {
             displayList.add(new ArrayList<MovieClip>());
         }
         removeQueue = new ArrayList<MovieClip>();
-        this.controller = controller;
     }
     
    

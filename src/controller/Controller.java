@@ -41,9 +41,10 @@ public class Controller {
     /** Constructor */
     public Controller() {
         //initialize model, view, key and mouse
-        model = new Model(this);
-        gameKeys = new KeyHandler(this);
-        gameMouse = new MouseHandler(this, model);
+        model = new Model();
+        gameKeys = new KeyHandler();
+        gameMouse = new MouseHandler(model);
+        gameMouse.hideMouse();
         view = new View(this, model);
         gameMouse.setView(view);
         
