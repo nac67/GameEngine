@@ -13,7 +13,7 @@ public class Constants {
      * Use 33 for 30fps
      * Use 16 for 60fps
      */
-    public static final int TIME_STEP = 33;
+    public static final int TIME_STEP = 16;
     
     /**
      * Number of layers to contain movie clips.

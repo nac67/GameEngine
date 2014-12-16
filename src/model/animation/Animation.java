@@ -6,7 +6,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Hashtable;
+import java.util.List;
+import java.util.Map;
 
 import javax.imageio.ImageIO;
 
@@ -29,10 +30,10 @@ public class Animation implements IteratingAnimation {
      * Specifically, this hashtable uses relative path as the key, and
      * the sequence of images as values.
      */
-    public static Hashtable<String,ArrayList<BufferedImage>> loadedAnimations;
+    public static Map<String,List<BufferedImage>> loadedAnimations;
     
     /**The list of frames stored as buffered images */
-    ArrayList<BufferedImage> images;
+    List<BufferedImage> images;
     public int currentFrame = 0;
     private Direction dir = Direction.FORWARD;
     private Point dimensions;

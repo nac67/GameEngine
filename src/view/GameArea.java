@@ -6,15 +6,14 @@ import java.awt.Graphics2D;
 import java.awt.Point;
 import java.awt.RenderingHints;
 import java.awt.geom.AffineTransform;
-import java.util.LinkedList;
+import java.util.List;
 
 import javax.swing.JPanel;
 
-import utils.Utils;
-
 import model.Constants;
-import model.MovieClip;
 import model.Model;
+import model.MovieClip;
+import utils.Utils;
 
 /** This is the main game area in the GUI.
  * It is a fixed sized region that contains all of the
@@ -22,6 +21,7 @@ import model.Model;
  * the paint method which actually updates the GUI.
  * @author Nick Cheng
  */
+@SuppressWarnings("serial")
 public class GameArea extends JPanel {
     private Model model;
     private int WIDTH;
@@ -52,7 +52,7 @@ public class GameArea extends JPanel {
         g2d.fillRect(0,0,WIDTH,HEIGHT);
 
         for (int i=0;i<Constants.NUM_DISPLAY_LAYERS;i++){
-            LinkedList<MovieClip> layer = model.displayList.get(i);
+            List<MovieClip> layer = model.displayList.get(i);
             for(MovieClip mc : layer){
                 drawMC(g2d,mc);
             }

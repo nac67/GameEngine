@@ -5,8 +5,9 @@ import java.awt.Point;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Hashtable;
+import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.List;
 
 import model.animation.Animation;
 import model.animation.IteratingAnimation;
@@ -112,7 +113,7 @@ public class Model {
      * call addChild without a layer number and everything will
      * be defaulted to layer 0.
      */
-    public LinkedList<LinkedList<MovieClip>> displayList;
+    public List<List<MovieClip>> displayList;
     
     /**
      * These movie clips will be removed on the next time step instead
@@ -121,7 +122,7 @@ public class Model {
      * they would be trying to delete themselves while the iterator
      * is going through the list
      */
-    public LinkedList<MovieClip>removeQueue;
+    public List<MovieClip>removeQueue;
     
     public Controller controller;
     
@@ -131,12 +132,12 @@ public class Model {
     /** Constructor */
     public Model (Controller controller){
         if(Constants.DEBUG) System.out.println("model init, ready.");
-        Animation.loadedAnimations = new Hashtable<String,ArrayList<BufferedImage>>();
-        displayList = new LinkedList<LinkedList<MovieClip>>();
+        Animation.loadedAnimations = new HashMap<String, List<BufferedImage>>();
+        displayList = new ArrayList<List<MovieClip>>();
         for (int i=0;i<Constants.NUM_DISPLAY_LAYERS;i++){
-            displayList.add(new LinkedList<MovieClip>());
+            displayList.add(new ArrayList<MovieClip>());
         }
-        removeQueue = new LinkedList<MovieClip>();
+        removeQueue = new ArrayList<MovieClip>();
         this.controller = controller;
     }
     
